@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body{
+background:
+radial-gradient(circle at top,#4b4b4b,#111 60%),
+repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 2px,transparent 2px 4px);
+font-family:'VT323',monospace;
+margin:0;
+display:grid;
+place-items:center;
+height:100vh;
+color:#9dff7b;
+}
+body:before{
+content:'';
+position:fixed;inset:0;
+pointer-events:none;
+background:repeating-linear-gradient(transparent 0 3px,rgba(0,0,0,.15) 3px 4px);
+mix-blend-mode:multiply;
+}
+.player{
+width:540px;
+background:linear-gradient(#8c8c8c,#5b5b5b 40%,#303030);
+border:3px solid #1b1b1b;
+box-shadow:0 0 25px #8aff00, inset 0 0 8px rgba(255,255,255,.25);
+padding:14px;
+border-radius:6px;
+}
+.title{
+background:linear-gradient(90deg,#273,#8fbf63);
+color:#fff;
+padding:6px;
+font-size:30px;
+letter-spacing:2px;
+text-shadow:1px 1px #000;
+border:2px inset #999;
+margin-bottom:10px;
+}
+.display{
+background:#001500;
+border:2px inset #888;
+padding:10px;
+box-shadow:inset 0 0 20px #00ff66;
+}
+#time,#song{font-size:26px}
+#viz{width:100%;background:#000;border:1px solid #3f3;margin:8px 0}
+.controls{display:flex;justify-content:center;gap:10px;margin:12px 0}
+button{
+width:54px;height:54px;border:none;border-radius:4px;
+background:linear-gradient(#d7d7d7,#777);
+box-shadow:0 3px #222,inset 0 0 3px #fff;
+font-size:22px;cursor:pointer;
+transition:.1s;
+}
+button:hover{filter:brightness(1.1)}
+button:active{transform:translateY(2px) scale(.96) rotate(-1deg)}
+.playlist{
+background:#141414;
+border:2px inset #555;
+padding:8px;
+margin-top:10px;
+height:130px;
+overflow:auto;
+font-size:24px;
+}
+.track{padding:5px;border-bottom:1px dashed #444}
+.track:hover{background:#2f2f2f}
+.active{background:#4fa63a;color:#fff}
+input[type=range]{accent-color:#78ff42}
